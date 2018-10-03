@@ -18,7 +18,7 @@
 		DAAD2491216406D80059C3FF /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAD2490216406D80059C3FF /* RegisterVC.swift */; };
 		DAAD2493216407000059C3FF /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAD2492216407000059C3FF /* WelcomeVC.swift */; };
 		DAAD2496216408370059C3FF /* CustomMessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAD2494216408360059C3FF /* CustomMessageCell.swift */; };
-		DAAD2497216408370059C3FF /* CustomMessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAAD2495216408370059C3FF /* CustomMessageCell.xib */; };
+		DAAD2497216408370059C3FF /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAAD2495216408370059C3FF /* MessageCell.xib */; };
 		DAAD249921642DA90059C3FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DAAD249821642DA90059C3FF /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +37,7 @@
 		DAAD2490216406D80059C3FF /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		DAAD2492216407000059C3FF /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		DAAD2494216408360059C3FF /* CustomMessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomMessageCell.swift; sourceTree = "<group>"; };
-		DAAD2495216408370059C3FF /* CustomMessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomMessageCell.xib; sourceTree = "<group>"; };
+		DAAD2495216408370059C3FF /* MessageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
 		DAAD249821642DA90059C3FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E4121F6829F1C824DDAF5295 /* Pods-ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -144,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				DAAD2494216408360059C3FF /* CustomMessageCell.swift */,
-				DAAD2495216408370059C3FF /* CustomMessageCell.xib */,
+				DAAD2495216408370059C3FF /* MessageCell.xib */,
 			);
 			name = "Custom Cell";
 			sourceTree = "<group>";
@@ -213,7 +213,7 @@
 				DAAD2480216404E20059C3FF /* LaunchScreen.storyboard in Resources */,
 				DAAD247D216404E20059C3FF /* Assets.xcassets in Resources */,
 				DAAD249921642DA90059C3FF /* GoogleService-Info.plist in Resources */,
-				DAAD2497216408370059C3FF /* CustomMessageCell.xib in Resources */,
+				DAAD2497216408370059C3FF /* MessageCell.xib in Resources */,
 				DAAD247B216404E20059C3FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,8 +226,6 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ChatApp/Pods-ChatApp-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ChameleonFramework/ChameleonFramework.framework",
@@ -238,8 +236,6 @@
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ChameleonFramework.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
@@ -258,15 +254,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
 				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-ChatApp-checkManifestLockResult.txt",
 			);
@@ -452,6 +444,7 @@
 				DAAD2486216404E20059C3FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
